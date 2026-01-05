@@ -1,0 +1,30 @@
+{
+  "name": "just-do-it",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev",
+    "dev:server": "turbo -F @just-do-it/backend dev",
+    "dev:setup": "turbo -F @just-do-it/backend dev:setup"
+  },
+  "dependencies": {
+    "@just-do-it/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251213.0",
+    "@just-do-it/config": "workspace:*",
+    "turbo": "^2.6.3",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@9.15.3"
+}

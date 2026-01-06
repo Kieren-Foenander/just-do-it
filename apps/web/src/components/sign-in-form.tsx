@@ -11,7 +11,7 @@ import { Label } from "./ui/label";
 
 export default function SignInForm({ onSwitchToSignUp }: { onSwitchToSignUp: () => void }) {
   const navigate = useNavigate({
-    from: "/",
+    from: "/login",
   });
 
   const form = useForm({
@@ -47,9 +47,7 @@ export default function SignInForm({ onSwitchToSignUp }: { onSwitchToSignUp: () 
   });
 
   return (
-    <div className="mx-auto w-full mt-10 max-w-md p-6">
-      <h1 className="mb-6 text-center text-3xl font-bold">Welcome Back</h1>
-
+    <div className="w-full">
       <form
         onSubmit={(e) => {
           e.preventDefault();
